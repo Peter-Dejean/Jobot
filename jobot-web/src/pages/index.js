@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Head from 'next/head';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+import { createParser } from 'eventsource-parser';
 
 export default function Home() {
   const [ apiKey, setApiKey ] = useState('');
