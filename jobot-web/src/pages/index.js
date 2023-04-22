@@ -8,7 +8,7 @@ import { streamOpenAIResponse } from '@/utils/openai';
 
 export default function Home() {
   
-  const API_URL = "https://api.openai.com/v1/chat/completions";
+  const API_URL = "/api/chat";
   const user = useUser();
   const [ userMessage, setUserMessage] = useState('')
   const [messages, setMessages] = useState([
@@ -27,6 +27,7 @@ export default function Home() {
 
       if (!userMessage) {
         alert("Please enter a message before you hit send");
+        return;
       }
 
       const oldUserMessage = userMessage;

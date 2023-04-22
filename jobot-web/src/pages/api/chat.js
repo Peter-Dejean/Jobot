@@ -9,6 +9,8 @@ async function handler(req, res) {
   const supabase = createMiddlewareSupabaseClient({ req, res });
   const body = await req.json();
 
+  body.model = "gpt-3.5-turbo";
+  
   const {
     data: { user },
     error,
